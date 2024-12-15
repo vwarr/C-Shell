@@ -1,6 +1,7 @@
-#define INITIAL_BUFFER_SIZE 1024
 #include <stdio.h>
 #include <stdlib.h>
+
+#define INITIAL_BUFFER_SIZE 1024
 
 char *csh_read_line() {
     int buf_size = INITIAL_BUFFER_SIZE;
