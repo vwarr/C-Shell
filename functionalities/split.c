@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define CSH_TOK_BUFSIZE 64
 #define CSH_TOK_DELIM " \t\r\n\a"
@@ -10,7 +11,7 @@ char **csh_split_line(char* line) {
     char **tokens = malloc(CSH_TOK_BUFSIZE * sizeof(char*));
     char *token;
     if (!tokens) {
-        fprint(stderr, "csh: allocation error\n");
+        fprintf(stderr, "csh: allocation error\n");
         exit(EXIT_FAILURE);
     }
     token = strtok(line, CSH_TOK_DELIM);
@@ -22,7 +23,7 @@ char **csh_split_line(char* line) {
             bufsize += CSH_TOK_BUFSIZE;
             tokens = realloc(tokens, bufsize * sizeof(char*));
             if (!tokens) {
-                fprint(stderr, "csh: allocation error\n");
+                fprintf(stderr, "csh: allocation error\n");
                 exit(EXIT_FAILURE);
             }
         }

@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <read.c>
-#include <split.c>
+#include "functionalities/read.c"
+#include "functionalities/split.c"
+#include "functionalities/execute.c"
 
 void csh_loop() {
     char *line;
