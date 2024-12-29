@@ -16,7 +16,7 @@ char *csh_read_line() {
 
     while(1) {
         c = getchar();
-        if (c == '\0' || c == EOF) {
+        if (c == '\0' || c == EOF || c == '\n') {
             buffer[pos] = '\0';
             return buffer;
         } else {
