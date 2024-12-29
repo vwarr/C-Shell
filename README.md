@@ -1,0 +1,1 @@
+This Unix shell written in C runs all standard Unix commands. Builtin support for *cd*, *help*, *echo*, and *exit* included.
