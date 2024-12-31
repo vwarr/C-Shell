@@ -8,7 +8,7 @@ void csh_loop() {
     char **args;
     int status; 
     do {
-        printf(">");
+        printf("csh >");
         line = csh_read_line();
         args = csh_split_line(line);
         status = csh_execute(args);
